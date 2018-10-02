@@ -1,0 +1,12 @@
+---
+# handlers file for web
+
+- name: start apache centos
+  service:
+   name: httpd
+   state: started 
+
+- name: disable firewalld
+  service:
+   name: firewalld
+   state: stopped 

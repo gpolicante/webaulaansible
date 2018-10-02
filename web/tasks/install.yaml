@@ -1,0 +1,20 @@
+
+- name: instalando apache2 em distro debian 
+  package:
+   name: "{{apache_debian}}"
+   state: present
+  when: ansible_os_family == "Debian" 
+
+- name: instalando apache2 em distro centos 
+  package: 
+   name: "{{apache_centos}}"
+   state: present
+  notify: 
+   - start apache centos 
+   - disable firewalld 
+  when: ansible_os_family == "RedHat" 
+ 
+
+
+
+
