@@ -1,0 +1,6 @@
+
+- name: instalando puppetserver 
+  package: 
+   name: puppetserver 
+   update_cache: yes
+  when: ansible_hostname == server

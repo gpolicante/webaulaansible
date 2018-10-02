@@ -1,0 +1,5 @@
+
+- name: instalando puppet-agent 
+  package: 
+   name: puppet-agent 
+   update_cache: yes 
